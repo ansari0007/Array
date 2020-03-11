@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Sigmar+One&display=swap');
+body{
+    margin:0px;
+    padding:0px;
+    border:5px double red;
+    background-color:#ffffcc;
+
+    
+}
+
+header>h1{
+    font-size:3em;
+    color:#00ff00;
+    font-family: 'Fruktur', cursive;
+    letter-spacing:0.1em;
+    text-align:center;
+    animation:one 5s infinite;
+
+    
+    
+    
+}
+hr{
+    width:30%;
+    height:5px;
+    background-color:red;
+    border-radius:20%;
+}
+h3{
+    font-family: 'Indie Flower', cursive;
+    color:#ff0000;
+    padding:5px;
+    font-size:2em;
+    
+    
+    
+}
+ul,ol{
+    font-family: 'Shadows Into Light', cursive;
+    color:rgb(0,0,255);
+    padding-right:5px;
+    
+    
+}
+pre{
+
+    background-color:white;
+    color:red;
+    padding:5px;
+    border:2px black solid;
+    border-radius:10px;
+    overflow:auto;
+}
+
+
+summary{
+    font-family: 'Sigmar One', cursive;
+    color:#fff;
+    font-size:16px;
+    text-decoration:underline;
+    
+    
+}
+
+button{
+    width:100%;
+    font-size:1.5em;
+    border:2px solid red;
+    color:red;
+    font-family:cursive;
+}
+a{
+    text-decoration:none;
+}
+li{
+    font-size:20px;
+}
+ol li{
+    margin:5px;
+}
+ol.lol li:nth-child(even){
+    background:rgb(150,0,0);
+    border-radius:0px 50px 50px 0px;;
+    
+}
+ol.lol li:nth-child(odd){
+    background:rgb(0,0,150)
+    
+}
+
+
+
+@keyframes one{
+    
+    33%{
+        color:#ff8000;
+    }
+    66%{
+        color:#00ff00;
+    }
+    100%{
+        color:#0000ff;
+    }
+}

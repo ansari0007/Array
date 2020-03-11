@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<link rel="stylesheet" href="style.css">
+        <https://fonts.googleapis.com/css?family=Fruktur|Indie+Flower|Shadows+Into+Light&display=swap" rel="stylesheet">
+        
+        <title>Array</title>
+    </head>
+    <body>
+        <header>
+            <h1>Array</h1>
+            <hr>
+            <h3>what is Array?</h3>
+            <ul>
+                <li>Arrays are defined as the collection of similar type of data items stored at contiguous memory locations.
+
+</li>
+                <li>Arrays are the derived data type in C programming language which can store the primitive type of data such as int, char, double, float, etc.</li>
+                <li>
+                    Array is the simplest data structure where each data element can be randomly accessed by using its index number.<br>
+For example, if we want to store the marks of a student in 6 subjects, then we don't need to define different variable for the marks in different subject. instead of that, we can define an array which can store the marks in each subject at a the contiguous memory locations.
+                </li>
+                
+            </ul>
+            <h3>Properties of the Array</h3>
+            <ol>
+                <li>Each element is of same data type and carries a same size i.e. int = 4 bytes.
+
+</li>
+                <li>Elements of the array are stored at contiguous memory locations where the first element is stored at the smallest memory location.</li>
+                <li>
+                    Elements of the array can be randomly accessed since we can calculate the address of each element of the array with the given base address and the size of data element.
+                </li>
+                
+            </ol>
+            
+        </header>
+         <hr>
+        <section>
+        
+         <h3 align="center" style="color:green;">--c programe--</h3>
+         <ol class="lol">
+            <li>
+         <details>
+             <summary>one dimensional array[compile time]</summary>
+             <pre>
+/*
+--Array--
+programe - 1
+print one dimensional array[compile time]
+*/
+#include <stdio.h>
+
+int main() {
+    int arr[5]={2,5,1,5,9};
+    int i;
+    
+    for(i=0;i<5;i++)
+    {
+        printf("%d\n",arr[i]);
+        
+        
+    }
+    
+    return 0;
+}
+             </pre>
+        <button><a href="https://code.sololearn.com/ckO5Txf0TQgv/#c">try it yourself</a></button>
+         </details>
+         </li>
+         <li>
+         <details>
+             <summary>print one dimensional array[run time]</summary>
+             <pre>
+/*
+--Array--
+programe - 2
+print one dimensional array[compile time]
+*/
+#include <stdio.h>
+
+int main() {
+    int arr[5];
+    int i;
+    for(i=0;i<5;i++)
+    {
+        scanf("%d",&arr[i]);
+        
+        
+    }
+    for(i=0;i<5;i++)
+    {
+        printf("%d\n",arr[i]);
+        
+        
+    }
+    
+    return 0;
+}
+             </pre>
+        <button><a href="https://code.sololearn.com/c77OO3S7jMc8/#c">try it yourself</a></button>
+         </details>
+         </li>
+         <li>
+         <details>
+             <summary>print two dimensional array[compile time]</summary>
+             <pre>
+/*
+--Array--
+programe - 3
+print two dimensional array[compile time]
+*/
+#include <stdio.h>
+
+int main() {
+    int arr[2][3]={{2,5,4},{1,5,9}};
+    int i,j;
+    
+    for(i=0;i<2;i++){
+        for(j=0;j<3;j++){
+        printf("%d ",arr[i][j]);
+        }
+        printf("\n");
+    }
+    
+    return 0;
+}
+             </pre>
+        <button><a href="https://code.sololearn.com/cJdoVBU3K7D7/#c">try it yourself</a></button>
+         </details>
+         </li>
+         <li>
+         <details>
+             <summary>print two dimensional array[run time]</summary>
+             <pre>
+/*
+--Array--
+programe - 4
+print two dimensional array[run time]
+*/
+#include <stdio.h>
+
+int main() {
+    int arr[2][3];
+    int i,j;
+        for(i=0;i<2;i++){
+            for(j=0;j<3;j++){
+            scanf("%d",&arr[i][j]);
+            }
+        }
+    for(i=0;i<2;i++){
+        for(j=0;j<3;j++){
+        printf("%d ",arr[i][j]);
+        }
+        printf("\n");
+    }
+    
+    return 0;
+}
+             </pre>
+        <button><a href="https://code.sololearn.com/cdsdvsRFHdv6/#c">try it yourself</a></button>
+         </details>
+         </li>
+         <li>
+         <details>
+             <summary>Addition of one dimensional array</summary>
+             <pre>
+/*
+--Array--
+programe - 5
+addition of one dimesion array;
+*/
+#include <stdio.h>
+
+int main() {
+    int arr1[5]={8,6,5,1,2};
+    int arr2[5]={2,6,8,9,7};
+    int sum[5];
+    int i,j;
+        for(i=0;i<5;i++){
+            sum[i]=arr1[i]+arr2[i];
+        }
+        for(i=0;i<5;i++){
+            printf("%d ",sum[i]);
+        }
+        
+    
+    
+    return 0;
+}
+             </pre>
+        <button><a href="https://code.sololearn.com/cmwA516w6UXc/#c">try it yourself</a></button>
+         </details>
+         </li>
+         <li>
+         <details>
+             <summary>Addition of two dimensional array</summary>
+             <pre>
+/*
+--Array--
+programe - 6
+addition of two dimesion array;
+*/
+#include <stdio.h>
+
+int main() {
+    int arr1[5][3]={{8,6,2},{8,6,2},{8,6,2},{8,6,2},{8,6,2}};
+    int arr2[5][3]={{2,6,8},{2,6,8},{2,6,8},{2,6,8},{2,6,8}};
+    int sum[5][3];
+    int i,j;
+        for(i=0;i<5;i++){
+            for(j=0;j<3;j++){
+            sum[i][j]=arr1[i][j]+arr2[i][j];
+            }
+        }
+        for(i=0;i<5;i++){
+            for(j=0;j<3;j++){
+            printf("%d ",sum[i][j]);
+            }
+            printf("\n");
+        }
+        
+    
+    
+    return 0;
+}
+             </pre>
+        <button><a href="https://code.sololearn.com/cw3Hflpg9U8J/#c">try it yourself</a></button>
+         </details>
+         </li>
+         <li>
+         <details>
+             <summary>search element from array</summary>
+             <pre>
+/*
+--Array--
+programe - 7
+search a element in Array;
+*/
+#include <stdio.h>
+
+int main() {
+    int arr1[]={55,63,112,55,66,88,99,41,14,69,96,100,32,18,77};
+    int find;
+    int i,found=0;
+    scanf("%d",&find);
+    
+        
+        for(i=0;i<15;i++){
+            if(arr1[i]==find){
+                found=1; 
+                printf("%d  is present in array at %d  place\n",arr1[i],i+1);
+                break;
+                }
+            }
+        if(found==0){
+            printf("%d is not present in array",find);
+        }
+        
+    
+    
+    return 0;
+}
+             </pre>
+        <button><a href="https://code.sololearn.com/ctH6VbvxsgX0/#c">try it yourself</a></button>
+         </details>
+         </li>
+         <li>
+         <details>
+             <summary>find greatest element from Array</summary>
+             <pre>
+/*
+--Array--
+programe - 8
+find greatest element from Array;
+*/
+
+
+#include <stdio.h>
+
+int main() {
+    int arr[]={23,56,98,45,67,1,77,87,33,10};
+    int greatest=arr[0];
+    int i;
+    
+    
+    
+    for(i=0;i<10;i++){
+            
+            if(arr[i]>=greatest)
+                greatest=arr[i];
+    
+    
+    }
+    
+    
+    
+    
+    
+    
+    printf("greatest value is %d",greatest);
+    
+    return 0;
+}
+             </pre>
+        <button><a href="https://code.sololearn.com/cbLsw0X8Nwar/#c">try it yourself</a></button>
+         </details>
+         </li>
+         <li>
+         <details>
+             <summary>find smallest  element from Array</summary>
+             <pre>
+/*
+--Array--
+programe - 9
+find smallest  element from Array;
+*/
+
+
+#include <stdio.h>
+
+int main() {
+    int arr[]={23,56,98,45,67,1,77,87,33,10};
+    int smallest=arr[0];
+    int i;
+    
+    
+    
+    for(i=0;i<10;i++){
+            
+            if(arr[i]<=smallest)
+                smallest=arr[i];
+    
+    
+    }
+    
+    
+    
+    
+    
+    
+    printf("smallest value is %d",smallest);
+    
+    return 0;
+}
+             </pre>
+        <button><a href="https://code.sololearn.com/chkGQm2Jj8vh/#c">try it yourself</a></button>
+         </details>
+         </li>
+         <li>
+         <details>
+             <summary>Multiplication of two dimensional array</summary>
+             <pre>
+#include <stdio.h>
+ 
+int main()
+{
+  int m, n, p, q, c, d, k, sum = 0;
+  int first[10][10], second[10][10], multiply[10][10];
+ 
+  printf("Enter number of rows and columns of first matrix\n");
+  scanf("%d%d", &m, &n);
+  printf("Enter elements of first matrix\n");
+ 
+  for (c = 0; c < m; c++)
+    for (d = 0; d < n; d++)
+      scanf("%d", &first[c][d]);
+ 
+  printf("Enter number of rows and columns of second matrix\n");
+  scanf("%d%d", &p, &q);
+ 
+  if (n != p)
+    printf("The multiplication isn't possible.\n");
+  else
+  {
+    printf("Enter elements of second matrix\n");
+ 
+    for (c = 0; c < p; c++)
+      for (d = 0; d < q; d++)
+        scanf("%d", &second[c][d]);
+ 
+    for (c = 0; c < m; c++) {
+      for (d = 0; d < q; d++) {
+        for (k = 0; k < p; k++) {
+          sum = sum + first[c][k]*second[k][d];
+        }
+ 
+        multiply[c][d] = sum;
+        sum = 0;
+      }
+    }
+ 
+    printf("Product of the matrices:\n");
+ 
+    for (c = 0; c < m; c++) {
+      for (d = 0; d < q; d++)
+        printf("%d\t", multiply[c][d]);
+ 
+      printf("\n");
+    }
+  }
+ 
+  return 0;
+}
+             </pre>
+        <button><a href="https://code.sololearn.com/ckqBoXBpS5b2/#c">try it yourself</a></button>
+         </details>
+         </li>
+            </ol>
+        </section>
+        
+    </body>
+</html>
